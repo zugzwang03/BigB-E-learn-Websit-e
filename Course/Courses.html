@@ -342,10 +342,39 @@
         <ul class="nav-list">
             <li>
                 <i class='bx bx-search'></i>
-                <input type="text" placeholder="Search...">
+               <input type="text" placeholder="Search..." onkeyup="myFunction()" id="mySearch">
                 <span class="tooltip">Search</span>
             </li>
+             <div>
+                    <ul id="options">
+                        <li><a href="subjects/computer_courses.html"><small>Computer science</small></a></li>
+                        <li><a href="subjects/computer_courses.html"><small>Data Structure</small></a></li>
+                        <li><a href="subjects/computer_courses.html"><small>Algorithm</small></a></li>
+                        <li><a href="subjects/computer_courses.html"><small>Programming Languages</small></a></li>
+                        <li><a href="subjects/computer_courses.html"><small>Quiz</small></a></li>
+                    </ul>
+                    </div> 
             <li>
+                 <script>
+                function myFunction() {
+                  // Declare variables
+                  var input, filter, ul, li, a, i;
+                  input = document.getElementById("mySearch");
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById("options");
+                  li = ul.getElementsByTagName("li");
+                
+                  // Loop through all list items, and hide those who don't match the search query
+                  for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                      li[i].style.display = "";
+                    } else {
+                      li[i].style.display = "none";
+                    }
+                  }
+                }
+                </script>
                 <a href="../index.html">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Home</span>
