@@ -1153,3 +1153,21 @@ footer .row > div:nth-child(1) p{
 		width: 100%;
 	}
 }
+/* Style the navigation menu */
+#options {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+#options li a {
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  display: block
+}
+
+#options li a:hover {
+  background-color: rgb(156, 77, 156)
+ }
